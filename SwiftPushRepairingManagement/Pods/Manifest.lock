@@ -1,0 +1,64 @@
+PODS:
+  - Alamofire (4.8.0)
+  - DZNEmptyDataSet (1.8.1)
+  - HandyJSON (4.2.0)
+  - JXPhotoBrowser (2.1.2):
+    - JXPhotoBrowser/Kingfisher (= 2.1.2)
+  - JXPhotoBrowser/Core (2.1.2)
+  - JXPhotoBrowser/Kingfisher (2.1.2):
+    - JXPhotoBrowser/Core
+    - Kingfisher
+  - Kingfisher (5.0.1)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - ObjectMapper (3.4.2)
+  - Onboard (2.3.3)
+  - Result (4.0.0)
+  - SnapKit (4.2.0)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DZNEmptyDataSet
+  - HandyJSON (= 4.2.0)
+  - JXPhotoBrowser
+  - Kingfisher
+  - Moya
+  - ObjectMapper
+  - Onboard
+  - SnapKit
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - DZNEmptyDataSet
+    - HandyJSON
+    - JXPhotoBrowser
+    - Kingfisher
+    - Moya
+    - ObjectMapper
+    - Onboard
+    - Result
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
+  JXPhotoBrowser: 5a088fa1e8d413caf4e39f76adde31b34c054599
+  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: eaf45e946ca5765a6e93853c5b539da9e72ab155
+
+COCOAPODS: 1.5.3

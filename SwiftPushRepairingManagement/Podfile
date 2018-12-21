@@ -1,0 +1,29 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+
+use_frameworks!
+
+target 'SwiftPushRepairingManagement' do
+
+pod 'DZNEmptyDataSet' #默认页面（没有数据）
+
+pod 'Kingfisher'
+
+pod 'Onboard'   #启动页
+
+pod 'Alamofire'  #  网络请求
+
+pod 'SwiftyJSON'
+
+pod 'SnapKit'
+
+pod 'JXPhotoBrowser'
+
+pod 'ObjectMapper'
+
+pod 'Moya'
+
+pod 'HandyJSON', '4.2.0'
+
+
+end 
