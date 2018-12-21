@@ -25,6 +25,10 @@
 		4231619021CA2F1700E61E91 /* StatisticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231618F21CA2F1700E61E91 /* StatisticalViewController.swift */; };
 		4231619221CA2F3900E61E91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231619121CA2F3900E61E91 /* LoginViewController.swift */; };
 		4231619521CA380B00E61E91 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231619421CA380B00E61E91 /* AppConfig.swift */; };
+		427E4CBC21CD065C0000EFD9 /* APIManagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBB21CD065C0000EFD9 /* APIManagerHeader.swift */; };
+		427E4CBE21CD067B0000EFD9 /* DataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBD21CD067B0000EFD9 /* DataConfig.swift */; };
+		427E4CC021CD06CA0000EFD9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBF21CD06CA0000EFD9 /* APIManager.swift */; };
+		427E4CC721CD15680000EFD9 /* KeychainItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CC621CD15680000EFD9 /* KeychainItemWrapper.swift */; };
 		80A6E8D246E342BB5F03A0B5 /* Pods_SwiftPushRepairingManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA35535A7E6B75E85D7DE347 /* Pods_SwiftPushRepairingManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,11 @@
 		4231618F21CA2F1700E61E91 /* StatisticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticalViewController.swift; sourceTree = "<group>"; };
 		4231619121CA2F3900E61E91 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4231619421CA380B00E61E91 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		427E4CBB21CD065C0000EFD9 /* APIManagerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerHeader.swift; sourceTree = "<group>"; };
+		427E4CBD21CD067B0000EFD9 /* DataConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConfig.swift; sourceTree = "<group>"; };
+		427E4CBF21CD06CA0000EFD9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		427E4CC121CD07070000EFD9 /* SwiftPushRepairingManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPushRepairingManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		427E4CC621CD15680000EFD9 /* KeychainItemWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemWrapper.swift; sourceTree = "<group>"; };
 		7D359D150E02D28E2A4F4B33 /* Pods-SwiftPushRepairingManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPushRepairingManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPushRepairingManagement/Pods-SwiftPushRepairingManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		B5215208B993D59614203192 /* Pods-SwiftPushRepairingManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPushRepairingManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPushRepairingManagement/Pods-SwiftPushRepairingManagement.release.xcconfig"; sourceTree = "<group>"; };
 		EA35535A7E6B75E85D7DE347 /* Pods_SwiftPushRepairingManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPushRepairingManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +198,10 @@
 		4231616621CA2A9100E61E91 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				427E4CBB21CD065C0000EFD9 /* APIManagerHeader.swift */,
+				427E4CBD21CD067B0000EFD9 /* DataConfig.swift */,
+				427E4CBF21CD06CA0000EFD9 /* APIManager.swift */,
+				427E4CC121CD07070000EFD9 /* SwiftPushRepairingManagement-Bridging-Header.h */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -196,6 +209,7 @@
 		4231616721CA2A9F00E61E91 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				427E4CC521CD155D0000EFD9 /* Tool */,
 				4231619321CA37E400E61E91 /* Macro */,
 			);
 			path = Utility;
@@ -381,6 +395,14 @@
 			path = Macro;
 			sourceTree = "<group>";
 		};
+		427E4CC521CD155D0000EFD9 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				427E4CC621CD15680000EFD9 /* KeychainItemWrapper.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		68BBE3059CDFE0AE3453C7DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +490,7 @@
 				TargetAttributes = {
 					4231613121CA27E200E61E91 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					4231614521CA27E400E61E91 = {
 						CreatedOnToolsVersion = 10.1;
@@ -537,7 +560,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -551,7 +573,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -590,12 +611,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427E4CC021CD06CA0000EFD9 /* APIManager.swift in Sources */,
 				4231619221CA2F3900E61E91 /* LoginViewController.swift in Sources */,
 				4231613821CA27E200E61E91 /* ViewController.swift in Sources */,
 				4231617121CA2CF100E61E91 /* BaseViewController.swift in Sources */,
 				4231619021CA2F1700E61E91 /* StatisticalViewController.swift in Sources */,
 				4231618E21CA2EFF00E61E91 /* MessageRemindPageViewController.swift in Sources */,
+				427E4CBE21CD067B0000EFD9 /* DataConfig.swift in Sources */,
 				4231616F21CA2B4100E61E91 /* RootTabBarViewController.swift in Sources */,
+				427E4CC721CD15680000EFD9 /* KeychainItemWrapper.swift in Sources */,
 				4231617321CA2D0800E61E91 /* BaseNavigationController.swift in Sources */,
 				4231617721CA2D4200E61E91 /* BaseTableViewCell.swift in Sources */,
 				4231618C21CA2EE700E61E91 /* CluesManagementPageViewController.swift in Sources */,
@@ -603,6 +627,7 @@
 				4231619521CA380B00E61E91 /* AppConfig.swift in Sources */,
 				4231617521CA2D2900E61E91 /* BaseTableView.swift in Sources */,
 				4231613621CA27E200E61E91 /* AppDelegate.swift in Sources */,
+				427E4CBC21CD065C0000EFD9 /* APIManagerHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,16 +803,19 @@
 			baseConfigurationReference = 7D359D150E02D28E2A4F4B33 /* Pods-SwiftPushRepairingManagement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NZL4MFD85;
 				INFOPLIST_FILE = SwiftPushRepairingManagement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.91bihu.SwiftPushRepairingManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPushRepairingManagement/NetWork/SwiftPushRepairingManagement-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -798,16 +826,18 @@
 			baseConfigurationReference = B5215208B993D59614203192 /* Pods-SwiftPushRepairingManagement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NZL4MFD85;
 				INFOPLIST_FILE = SwiftPushRepairingManagement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.91bihu.SwiftPushRepairingManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPushRepairingManagement/NetWork/SwiftPushRepairingManagement-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

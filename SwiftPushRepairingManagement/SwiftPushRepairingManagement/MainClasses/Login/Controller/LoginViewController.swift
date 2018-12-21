@@ -10,10 +10,35 @@ import UIKit
 
 class LoginViewController: BaseViewController {
 
+    var dic = [String:String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = true;
 
-        // Do any additional setup after loading the view.
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        
+        loadData()
+        dic.updateValue("cstui", forKey: "Account")
+        dic.updateValue("qweqwe", forKey: "Password")
+    }
+    
+    
+    func loadData() {
+        
+        
+        APIManager.loginRequestData(.POST, URLString: PostLogin, parameters: dic) { (result) in
+            
+            print("\(result)")
+            
+        }
+        
     }
     
 
