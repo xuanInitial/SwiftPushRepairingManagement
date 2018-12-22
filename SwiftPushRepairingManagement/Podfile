@@ -15,8 +15,7 @@ pod 'Alamofire'  #  网络请求
 
 pod 'SwiftyJSON'
 
-pod 'SnapKit'
-
+pod 'SnapKit', '~> 4.0.0'
 #pod 'JXPhotoBrowser'
 
 pod 'ObjectMapper'

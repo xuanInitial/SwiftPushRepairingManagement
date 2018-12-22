@@ -11,7 +11,7 @@ PODS:
   - ObjectMapper (3.4.2)
   - Onboard (2.3.3)
   - Result (4.0.0)
-  - SnapKit (4.2.0)
+  - SnapKit (4.0.1)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -22,7 +22,7 @@ DEPENDENCIES:
   - Moya
   - ObjectMapper
   - Onboard
-  - SnapKit
+  - SnapKit (~> 4.0.0)
   - SwiftyJSON
 
 SPEC REPOS:
@@ -47,9 +47,9 @@ SPEC CHECKSUMS:
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 52f7b37e2fd52be1fe64a25ebff0ca5afda311e1
+PODFILE CHECKSUM: 55e128573602c24bb857b1acf2d7b51f8d18ba3f
 
 COCOAPODS: 1.5.3
