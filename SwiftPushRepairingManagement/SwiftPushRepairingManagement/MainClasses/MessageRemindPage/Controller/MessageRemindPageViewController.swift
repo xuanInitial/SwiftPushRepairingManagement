@@ -20,6 +20,8 @@ class MessageRemindPageViewController: BaseViewController {
 
     self.view.backgroundColor = UIColor.white
     self.titleLabel.text = "消息"
+      
+        //self.AlertController("messages", "")
         
     }
     

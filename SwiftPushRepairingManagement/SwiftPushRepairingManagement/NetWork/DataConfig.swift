@@ -9,22 +9,21 @@
 import Foundation
 
 /******************************测试********************************/
-//let =  "\(BaseUrl)http://192.168.5.19:8123/api/" //
 
 let  BaseUrl  = "http://192.168.5.19:8124/api/" //主干
 
 //
-//let =  "\(BaseUrl)http://192.168.5.19:8125/api/" //
+//let  BaseUrl =  "http://192.168.5.19:8125/api/" //
 
-//let =  "\(BaseUrl)https://buc.91bihu.com/api/"
 
-//let =  "\(BaseUrl)https://tx.91bihu.com/api/"
 
-//let =  "\(BaseUrl)http://cf.3w.dkys.org/api/"
+//let  BaseUrl = "https://tx.91bihu.com/api/"
+
+
 
 //登录
 
-let   PostLogin =  "\(BaseUrl)Accident/Login"
+let   PostLogin =  "Accident/Login"
 
 
 //获取消息列表

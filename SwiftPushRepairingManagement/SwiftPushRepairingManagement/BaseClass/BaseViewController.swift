@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import ObjectMapper
+import Moya
+import RxSwift
 
 class BaseViewController: UIViewController {
 
@@ -17,7 +20,6 @@ class BaseViewController: UIViewController {
         titleLab.textAlignment = NSTextAlignment.center
         titleLab.font = TXFont(x: 16)
         titleLab.textColor = UIColor.black
-        titleLab.text = "标题"
         return titleLab;
     }()
     

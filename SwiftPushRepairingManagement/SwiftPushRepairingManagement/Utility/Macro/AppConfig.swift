@@ -124,6 +124,8 @@ let  iOS11  =  (Int32(NSFoundationVersionNumber) >= NSFoundationVersionNumber10_
 /** 弱指针*/
 //#define TXWeakSelf(weakSelf) __weak __typeof(&*self)weakSelf = self
 
+
+
 let vCFBundleShortVersionStr  = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
 
 ///*Alert弹出提示对话框*/
@@ -136,10 +138,11 @@ let vCFBundleShortVersionStr  = Bundle.main.object(forInfoDictionaryKey: "CFBund
 ////判断字符串为空
 //#define NULLString(string) ((![string isKindOfClass:[NSString class]])||[string isEqualToString:@""] || (string == nil) || [string isEqualToString:@""] || [string isKindOfClass:[NSNull class]]||[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
 
-//#ifdef DEBUG
+//#if DEBUG
 //#define TXLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 //#else
 //#define TXLog(...)
+
 //#define WEAKSELF __weak typeof(self) weakSelf = self
 //#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 //#define FIT_WIDTH [UIScreen mainScreen].bounds.size.width/375

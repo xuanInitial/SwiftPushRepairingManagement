@@ -21,7 +21,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white;
         window?.makeKeyAndVisible()
         
+        initRootView()
         return true
+    }
+    
+    
+    func initRootView() {
+        
+        if  UserDefaults.JudgeFirst.string(forKey: .PushRepairingManagementFirst) == nil{
+            
+            setStaticGuidePage()
+        }
+        
+        
+        
+       
+        
+    }
+    
+    func setStaticGuidePage() {
+        
+        UserDefaults.JudgeFirst.set(value: "First", forKey: .PushRepairingManagementFirst)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

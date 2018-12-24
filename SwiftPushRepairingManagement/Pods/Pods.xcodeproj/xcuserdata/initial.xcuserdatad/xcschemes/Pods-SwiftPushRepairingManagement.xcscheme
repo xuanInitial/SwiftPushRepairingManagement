@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3B8013B5218803F547B7BC2B24EE2AE"
+               BlueprintIdentifier = "63629C91ED3DFA74BE1DAD1587DCC9D9"
                BuildableName = "Pods_SwiftPushRepairingManagement.framework"
                BlueprintName = "Pods-SwiftPushRepairingManagement"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F3B8013B5218803F547B7BC2B24EE2AE"
+            BlueprintIdentifier = "63629C91ED3DFA74BE1DAD1587DCC9D9"
             BuildableName = "Pods_SwiftPushRepairingManagement.framework"
             BlueprintName = "Pods-SwiftPushRepairingManagement"
             ReferencedContainer = "container:Pods.xcodeproj">

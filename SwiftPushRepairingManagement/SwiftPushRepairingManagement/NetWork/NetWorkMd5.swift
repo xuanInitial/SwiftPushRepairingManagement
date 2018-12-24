@@ -33,8 +33,6 @@ extension String {
         
         
         let UUIDDate = SSKeychain.passwordData(forService: "com.91bihu.SwiftPushRepairingManagement", account: "com.91bihu.SwiftPushRepairingManagement")
-        
-        
         var UUID : NSString!
         
         if UUIDDate != nil{
@@ -42,12 +40,9 @@ extension String {
             UUID = NSString(data: UUIDDate!, encoding: String.Encoding.utf8.rawValue)
         }
         
-        
         if(UUID == nil){
             
             UUID = UIDevice.current.identifierForVendor?.uuidString as NSString?
-            
-            
             SSKeychain.setPassword(UUID! as String, forService: "com.91bihu.SwiftPushRepairingManagement", account: "com.91bihu.SwiftPushRepairingManagement")
             
         }
