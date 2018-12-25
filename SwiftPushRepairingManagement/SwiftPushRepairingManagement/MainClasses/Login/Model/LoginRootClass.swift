@@ -8,9 +8,9 @@ import HandyJSON
 
 class LoginRootClass : HandyJSON{
 
-	var code : String?
-	var data : LoginData?
-	var message : String?
+	var Code : String?
+	var Data : LoginData?
+	var Message : String?
 
 
 	required init() {}

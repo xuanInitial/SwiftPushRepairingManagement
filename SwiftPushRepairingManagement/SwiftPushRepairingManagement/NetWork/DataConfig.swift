@@ -21,67 +21,57 @@ let  BaseUrl  = "http://192.168.5.19:8124/api/" //主干
 
 
 
-//登录
 
-let   PostLogin =  "Accident/Login"
-
-
-//获取消息列表
-let PostGetMessageList = "\(BaseUrl)Accident/GetMessage"
-
-
-//抢单
-let PostGrabOrder = "\(BaseUrl)Accident/GrabOrder"
 
 
 /**
  保存代理人和极光账户关系
  */
-let PostSaveJgAccount = "\(BaseUrl)Accident/SaveJgAccount"
+let PostSaveJgAccount = "Accident/SaveJgAccount"
 
 
 /***************************线索**********************************/
 /**
  获取线索管理总数
  */
-let PostGetAccidentClueTotalCout = "\(BaseUrl)Accident/GetAccidentClueTotalCout"
+let PostGetAccidentClueTotalCout = "Accident/GetAccidentClueTotalCout"
 
 
 /**
  线索管理列表+搜索
  */
-let PostGetAccidentClue =  "\(BaseUrl)Accident/GetAccidentClue"
+let PostGetAccidentClue =  "Accident/GetAccidentClue"
 
 //获取续保
-let GetRenewalUri =  "\(BaseUrl)Accident/TXGetReInfo"
+let GetRenewalUri =  "Accident/TXGetReInfo"
 
 
 //获取续保9月1号新的
-let GetNewTGetReInfo =  "\(BaseUrl)Accident/TGetReInfo"
+let GetNewTGetReInfo =  "Accident/TGetReInfo"
 
 //获取线索详情
-let PostGetClusDetails =  "\(BaseUrl)Accident/GetClusDetails"
+let PostGetClusDetails =  "Accident/GetClusDetails"
 
 
 //获取跟进记录
-let PostGetFollowReport =  "\(BaseUrl)Accident/GetFollowReportV2" //2.1版本修改
+let PostGetFollowReport =  "Accident/GetFollowReportV2" //2.1版本修改
 
 
 
 //删除线索
-let PostDelAppClue =  "\(BaseUrl)Accident/DelAppClue" //2.5版本修改
+let PostDelAppClue =  "Accident/DelAppClue" //2.5版本修改
 
 /*****************************短信********************************/
 
 /**
  获取短信模板
  */
-let PostGetSmsTemplateList =  "\(BaseUrl)Accident/GetSmsTemplateList"
+let PostGetSmsTemplateList =  "Accident/GetSmsTemplateList"
 
 /**
  跟进记录发送短信
  */
-let PostSendMessage =  "\(BaseUrl)Accident/SendMessage"
+let PostSendMessage =  "Accident/SendMessage"
 
 
 /*****************************录入跟进********************************/
@@ -89,78 +79,78 @@ let PostSendMessage =  "\(BaseUrl)Accident/SendMessage"
 /**
  获取跟进状态
  */
-let PostGetFollowUpStates =  "\(BaseUrl)Accident/GetFollowUpStates"
+let PostGetFollowUpStates =  "Accident/GetFollowUpStates"
 
-let PostGetFollowUpStatesV2 =  "\(BaseUrl)Accident/GetFollowUpStatesV2"//2.3版本以后使用
+let PostGetFollowUpStatesV2 =  "Accident/GetFollowUpStatesV2"//2.3版本以后使用
 
 /**
  获取流失原因
  */
-let PostGetLossReasons =  "\(BaseUrl)Accident/GetLossReasons"
+let PostGetLossReasons =  "Accident/GetLossReasons"
 
 /**
  获取顶级代理人下所有接车人
  */
-let PostGetRecivesCarPeoples =  "\(BaseUrl)Accident/GetRecivesCarPeoples"
+let PostGetRecivesCarPeoples =  "Accident/GetRecivesCarPeoples"
 
 /**
  录入跟进
  */
-let PostInputFollowUp =  "\(BaseUrl)Accident/InputFollowUp"
+let PostInputFollowUp =  "Accident/InputFollowUp"
 
 
 /**
  编辑线索
  */
-let PostEditClueInfo =  "\(BaseUrl)Accident/EditClueInfo"
+let PostEditClueInfo =  "Accident/EditClueInfo"
 
 
 /**
  获取保险公司和案件类型
  */
-let PostGetClueParam =  "\(BaseUrl)Accident/GetClueParam"
+let PostGetClueParam =  "Accident/GetClueParam"
 
 
 /**
  线索是否可以跟进
  */
-let PostIsCanFollow =  "\(BaseUrl)Accident/IsCanFollow"
+let PostIsCanFollow =  "Accident/IsCanFollow"
 
 
 
 /**
  跟进上图片
  */
-let PostUploadImg =  "\(BaseUrl)Accident/UploadImg"
+let PostUploadImg =  "Accident/UploadImg"
 
 
 /*****************************个人中心统计********************************/
 /**
  获取个人中心统计信息
  */
-let PostGetStatisticsInfo =  "\(BaseUrl)Accident/GetStatisticsInfo"
+let PostGetStatisticsInfo =  "Accident/GetStatisticsInfo"
 
 
 /**
  版本号比较
  */
-let PostCompareVersion =  "\(BaseUrl)Accident/CompareVersion"
+let PostCompareVersion =  "Accident/CompareVersion"
 
 
 /**
  退出
  */
-let PostSignOut =  "\(BaseUrl)Accident/SignOut"
+let PostSignOut =  "Accident/SignOut"
 
 
 /**
  新增线索
  */
-let PostAddClues =  "\(BaseUrl)Accident/AddClues"
+let PostAddClues =  "Accident/AddClues"
 
 
 
 /**
  打电话校验
  */
-let PostExitCallPhone =  "\(BaseUrl)Accident/ExitCallPhone"
+let PostExitCallPhone =  "Accident/ExitCallPhone"

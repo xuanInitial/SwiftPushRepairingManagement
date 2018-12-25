@@ -8,18 +8,18 @@ import HandyJSON
 
 class LoginData : HandyJSON{
 
-	var account : String?
-	var agentId : Int?
-	var cityId : Int?
-	var departmentId : Int?
-	var functionCode : [LoginFunctionCode]?
-	var name : String?
-	var roleId : Int?
-	var roleName : String?
-	var roleType : Int?
-	var secretKey : String?
-	var token : String?
-	var topAgentId : Int?
+	var Account : String?
+	var AgentId : Int?
+	var CityId : Int?
+	var DepartmentId : Int?
+	var FunctionCode : [LoginFunctionCode]?
+	var Name : String?
+	var RoleId : Int?
+	var RoleName : String?
+	var RoleType : Int?
+	var SecretKey : String?
+	var Token : String?
+	var TopAgentId : Int?
 
 
 	required init() {}

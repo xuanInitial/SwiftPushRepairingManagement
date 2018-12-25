@@ -8,8 +8,8 @@ import HandyJSON
 
 class LoginFunctionCode : HandyJSON{
 
-	var agentId : Int?
-	var functionCode : String?
+	var AgentId : Int?
+	var FunctionCode : String?
 
 
 	required init() {}

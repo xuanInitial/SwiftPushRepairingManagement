@@ -33,9 +33,7 @@
 		425F9DA521D0D3C9004D0A35 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DA421D0D3C8004D0A35 /* LoginData.swift */; };
 		425F9DA821D0D3CF004D0A35 /* LoginFunctionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DA621D0D3CF004D0A35 /* LoginFunctionCode.swift */; };
 		425F9DA921D0D3CF004D0A35 /* LoginRootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DA721D0D3CF004D0A35 /* LoginRootClass.swift */; };
-		425F9DAD21D0F6A2004D0A35 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DAC21D0F6A2004D0A35 /* Network.swift */; };
-		425F9DAF21D1015E004D0A35 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DAE21D1015E004D0A35 /* MyService.swift */; };
-		427E4CBC21CD065C0000EFD9 /* APIManagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBB21CD065C0000EFD9 /* APIManagerHeader.swift */; };
+		425F9DAF21D1015E004D0A35 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */; };
 		427E4CBE21CD067B0000EFD9 /* DataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBD21CD067B0000EFD9 /* DataConfig.swift */; };
 		427E4CC021CD06CA0000EFD9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBF21CD06CA0000EFD9 /* APIManager.swift */; };
 		427E4CC921CE0A960000EFD9 /* NetWorkMd5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CC821CE0A960000EFD9 /* NetWorkMd5.swift */; };
@@ -78,9 +76,7 @@
 		425F9DA421D0D3C8004D0A35 /* LoginData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		425F9DA621D0D3CF004D0A35 /* LoginFunctionCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFunctionCode.swift; sourceTree = "<group>"; };
 		425F9DA721D0D3CF004D0A35 /* LoginRootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRootClass.swift; sourceTree = "<group>"; };
-		425F9DAC21D0F6A2004D0A35 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		425F9DAE21D1015E004D0A35 /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
-		427E4CBB21CD065C0000EFD9 /* APIManagerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerHeader.swift; sourceTree = "<group>"; };
+		425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
 		427E4CBD21CD067B0000EFD9 /* DataConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConfig.swift; sourceTree = "<group>"; };
 		427E4CBF21CD06CA0000EFD9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		427E4CC121CD07070000EFD9 /* SwiftPushRepairingManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPushRepairingManagement-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -195,13 +191,10 @@
 		4231616621CA2A9100E61E91 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				427E4CBB21CD065C0000EFD9 /* APIManagerHeader.swift */,
 				427E4CBD21CD067B0000EFD9 /* DataConfig.swift */,
-				427E4CBF21CD06CA0000EFD9 /* APIManager.swift */,
-				427E4CC821CE0A960000EFD9 /* NetWorkMd5.swift */,
-				425F9DAC21D0F6A2004D0A35 /* Network.swift */,
-				425F9DAE21D1015E004D0A35 /* MyService.swift */,
+				425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */,
 				427E4CC121CD07070000EFD9 /* SwiftPushRepairingManagement-Bridging-Header.h */,
+				427E4CBF21CD06CA0000EFD9 /* APIManager.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -412,6 +405,7 @@
 		427E4CC521CD155D0000EFD9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				427E4CC821CE0A960000EFD9 /* NetWorkMd5.swift */,
 				427E4CCD21CE1C700000EFD9 /* SSKeychain.h */,
 				427E4CCE21CE1C700000EFD9 /* SSKeychain.m */,
 				425F9D9321D0AA9A004D0A35 /* UserDefaultsSettable.swift */,
@@ -603,7 +597,6 @@
 				427E4CD121CE7F310000EFD9 /* TXViewLayoutHelper.swift in Sources */,
 				4231616F21CA2B4100E61E91 /* RootTabBarViewController.swift in Sources */,
 				4231617321CA2D0800E61E91 /* BaseNavigationController.swift in Sources */,
-				425F9DAD21D0F6A2004D0A35 /* Network.swift in Sources */,
 				4231617721CA2D4200E61E91 /* BaseTableViewCell.swift in Sources */,
 				4231618C21CA2EE700E61E91 /* CluesManagementPageViewController.swift in Sources */,
 				4231618A21CA2EC900E61E91 /* PersonalCenterViewController.swift in Sources */,
@@ -611,8 +604,7 @@
 				4231619521CA380B00E61E91 /* AppConfig.swift in Sources */,
 				4231617521CA2D2900E61E91 /* BaseTableView.swift in Sources */,
 				4231613621CA27E200E61E91 /* AppDelegate.swift in Sources */,
-				427E4CBC21CD065C0000EFD9 /* APIManagerHeader.swift in Sources */,
-				425F9DAF21D1015E004D0A35 /* MyService.swift in Sources */,
+				425F9DAF21D1015E004D0A35 /* NetAPIManager.swift in Sources */,
 				425F9DA921D0D3CF004D0A35 /* LoginRootClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

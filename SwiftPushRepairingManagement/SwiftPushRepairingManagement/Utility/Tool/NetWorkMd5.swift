@@ -31,7 +31,6 @@ extension String {
     
     func getUUID()->String{
         
-        
         let UUIDDate = SSKeychain.passwordData(forService: "com.91bihu.SwiftPushRepairingManagement", account: "com.91bihu.SwiftPushRepairingManagement")
         var UUID : NSString!
         

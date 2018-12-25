@@ -213,21 +213,21 @@ class LoginViewController: BaseViewController,UITextFieldDelegate {
         dic.updateValue(accountTF.text ?? "", forKey: "Account")
         dic.updateValue(passwordTF.text ?? "" , forKey: "Password")
 
-        let  provider = MoyaProvider<MyService>()
+        let  provider = MoyaProvider<NetAPIManager>()
         
-            provider.request(.login(parameters: dic)) { result in
+            provider.request(.PostLogin(parameters: dic)) { result in
             switch result {
             case let .success(moyaResponse):
-  
+                print(moyaResponse.request as Any)
                 let data = try! moyaResponse.mapJSON()
                 
                  let string = (data as AnyObject).modelToJSONString()
-                print("dsd:===","\(data)")
+                print("dsta:===","\(data)")
                 if let object = LoginRootClass.deserialize(from: string) {
                     
                     print("\(object)")
                     
-                    if let code = object.code{
+                    if let code = object.Code{
                         
                         if Int(code) == 1 {
                             let app = UIApplication.shared.delegate as? AppDelegate
@@ -237,7 +237,7 @@ class LoginViewController: BaseViewController,UITextFieldDelegate {
                             app?.window!.rootViewController = root
                         }
                         
-                        self.AlertController("\(object.message ?? "")", "")
+                        self.AlertController("\(object.Message ?? "")", "")
                     }
                     
                 }
@@ -247,40 +247,5 @@ class LoginViewController: BaseViewController,UITextFieldDelegate {
                 print(error)
             }
         }
-        
-        
-        
     }
-    
-
 }
-        //编辑区*********************
-
-
-
-//
-//
-//        //密码
-//        let pwdView = UIView()
-//        pwdView.backgroundColor = UIColor.white
-//        view.addSubview(pwdView)
-//
-//        pwdView.mas_makeConstraints({ make in
-//            make?.top.mas_equalTo(userView.mas_bottom).offset(2)
-//            make?.left.and().right().mas_equalTo(weakSelf.view)
-//            make?.height.mas_equalTo(62.5)
-//        })
-//
-//        }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
