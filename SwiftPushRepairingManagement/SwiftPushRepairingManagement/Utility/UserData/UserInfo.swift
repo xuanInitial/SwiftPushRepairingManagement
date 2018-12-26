@@ -19,9 +19,9 @@ class UserInfo: NSObject, NSCoding, NSCopying {
     var token = ""
     var topAgentId: Int = 0
     var cityId: Int = 0
-    var roleName = ""
-    /*角色名称 */    var functionCode: [Any] = []
-    //角色权限数组
+    var roleName = ""    /*角色名称 */
+   var functionCode: [Any] = []  //角色权限数组
+   
     
     func encode(with aCoder: NSCoder) {
         modelEncode(with: aCoder)

@@ -27,5 +27,12 @@ extension UserDefaults {
         }
     }
     
+    struct UserData:UserDefaultsSettable {
+        enum defaultKeys: String {
+            case loginData
+        }
+        
+    }
+    
     
 }

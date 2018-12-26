@@ -34,6 +34,9 @@
 		425F9DA821D0D3CF004D0A35 /* LoginFunctionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DA621D0D3CF004D0A35 /* LoginFunctionCode.swift */; };
 		425F9DA921D0D3CF004D0A35 /* LoginRootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DA721D0D3CF004D0A35 /* LoginRootClass.swift */; };
 		425F9DAF21D1015E004D0A35 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */; };
+		427B14C221D3B2A4005B9782 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14BF21D3B2A3005B9782 /* MessageData.swift */; };
+		427B14C321D3B2A4005B9782 /* MessageRootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C021D3B2A3005B9782 /* MessageRootClass.swift */; };
+		427B14C421D3B2A4005B9782 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C121D3B2A4005B9782 /* MessageList.swift */; };
 		427E4CBE21CD067B0000EFD9 /* DataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBD21CD067B0000EFD9 /* DataConfig.swift */; };
 		427E4CC021CD06CA0000EFD9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CBF21CD06CA0000EFD9 /* APIManager.swift */; };
 		427E4CC921CE0A960000EFD9 /* NetWorkMd5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4CC821CE0A960000EFD9 /* NetWorkMd5.swift */; };
@@ -77,6 +80,9 @@
 		425F9DA621D0D3CF004D0A35 /* LoginFunctionCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFunctionCode.swift; sourceTree = "<group>"; };
 		425F9DA721D0D3CF004D0A35 /* LoginRootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRootClass.swift; sourceTree = "<group>"; };
 		425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
+		427B14BF21D3B2A3005B9782 /* MessageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		427B14C021D3B2A3005B9782 /* MessageRootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageRootClass.swift; sourceTree = "<group>"; };
+		427B14C121D3B2A4005B9782 /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		427E4CBD21CD067B0000EFD9 /* DataConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConfig.swift; sourceTree = "<group>"; };
 		427E4CBF21CD06CA0000EFD9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		427E4CC121CD07070000EFD9 /* SwiftPushRepairingManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPushRepairingManagement-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -349,6 +355,9 @@
 		4231618421CA2E8900E61E91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				427B14BF21D3B2A3005B9782 /* MessageData.swift */,
+				427B14C121D3B2A4005B9782 /* MessageList.swift */,
+				427B14C021D3B2A3005B9782 /* MessageRootClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -521,6 +530,8 @@
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
@@ -537,6 +548,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
@@ -590,6 +603,7 @@
 				425F9D9C21D0B7BE004D0A35 /* extension_UIViewController.swift in Sources */,
 				425F9DA521D0D3C9004D0A35 /* LoginData.swift in Sources */,
 				427E4CCF21CE1C700000EFD9 /* SSKeychain.m in Sources */,
+				427B14C421D3B2A4005B9782 /* MessageList.swift in Sources */,
 				4231618E21CA2EFF00E61E91 /* MessageRemindPageViewController.swift in Sources */,
 				425F9D9A21D0B779004D0A35 /* extension_UIColor.swift in Sources */,
 				427E4CBE21CD067B0000EFD9 /* DataConfig.swift in Sources */,
@@ -602,6 +616,8 @@
 				4231618A21CA2EC900E61E91 /* PersonalCenterViewController.swift in Sources */,
 				427E4CC921CE0A960000EFD9 /* NetWorkMd5.swift in Sources */,
 				4231619521CA380B00E61E91 /* AppConfig.swift in Sources */,
+				427B14C321D3B2A4005B9782 /* MessageRootClass.swift in Sources */,
+				427B14C221D3B2A4005B9782 /* MessageData.swift in Sources */,
 				4231617521CA2D2900E61E91 /* BaseTableView.swift in Sources */,
 				4231613621CA27E200E61E91 /* AppDelegate.swift in Sources */,
 				425F9DAF21D1015E004D0A35 /* NetAPIManager.swift in Sources */,

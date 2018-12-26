@@ -219,15 +219,17 @@ class LoginViewController: BaseViewController,UITextFieldDelegate {
             switch result {
             case let .success(moyaResponse):
                 print(moyaResponse.request as Any)
-                let data = try! moyaResponse.mapJSON()
+                let data = try! (moyaResponse.mapJSON() as AnyObject).modelToJSONString()
                 
-                 let string = (data as AnyObject).modelToJSONString()
-                print("dsta:===","\(data)")
-                if let object = LoginRootClass.deserialize(from: string) {
-                    
+                print("dsta:===","\(data ?? "")")
+                if let object = LoginRootClass.deserialize(from: data) {
+               
                     print("\(object)")
                     
                     if let code = object.Code{
+                        
+                        UserData.writeUserInfo(userData: data!)
+                       
                         
                         if Int(code) == 1 {
                             let app = UIApplication.shared.delegate as? AppDelegate

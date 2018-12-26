@@ -3,6 +3,8 @@ PODS:
   - DZNEmptyDataSet (1.8.1)
   - HandyJSON (4.2.0)
   - Kingfisher (5.0.1)
+  - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.7)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
@@ -25,6 +27,8 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - HandyJSON (= 4.2.0)
   - Kingfisher
+  - MJExtension
+  - MJRefresh
   - Moya/RxSwift
   - ObjectMapper
   - Onboard
@@ -38,6 +42,8 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - HandyJSON
     - Kingfisher
+    - MJExtension
+    - MJRefresh
     - Moya
     - ObjectMapper
     - Onboard
@@ -53,6 +59,8 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
@@ -63,6 +71,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 080c8a43b46ca2b5a7e302ad45462c4daa869ce9
+PODFILE CHECKSUM: 4f587a14b201439c8e9f562a0fd1a22988d56b50
 
 COCOAPODS: 1.5.3

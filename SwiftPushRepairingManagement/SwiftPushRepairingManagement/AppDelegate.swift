@@ -17,9 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
        // window?.rootViewController = RootTabBarViewController()
-        window?.rootViewController = LoginViewController()
-        window?.backgroundColor = UIColor.white;
-        window?.makeKeyAndVisible()
+       window?.backgroundColor = UIColor.white;
         
         initRootView()
         return true
@@ -33,7 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             setStaticGuidePage()
         }
         
-        
+        let user = UserData.readUserInfo()
+        if user.Token != nil {
+            
+            window?.rootViewController = RootTabBarViewController()
+            window?.makeKeyAndVisible()
+            
+        }else {
+            window?.rootViewController = LoginViewController()
+            
+            window?.makeKeyAndVisible()
+        }
+       
         
        
         

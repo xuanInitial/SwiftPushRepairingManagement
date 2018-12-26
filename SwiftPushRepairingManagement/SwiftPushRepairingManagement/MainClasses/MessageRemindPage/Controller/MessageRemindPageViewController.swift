@@ -7,25 +7,60 @@
 //
 
 import UIKit
+import Moya
 
 class MessageRemindPageViewController: BaseViewController {
 
+    var page = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        print("vCFBundleShortVersionStr")
-        print(vCFBundleShortVersionStr ?? "1234")
+
 
     self.view.backgroundColor = UIColor.white
     self.titleLabel.text = "消息"
       
         //self.AlertController("messages", "")
         
+        let userData = UserData.readUserInfo()
+        
+        print(userData.Token as Any)
+        loadData()
     }
     
 
+    func loadData() {
+        
+        var dic = [String :Any]()
+        
+        dic.updateValue(self.page, forKey: "PageIndex")
+        dic.updateValue(15, forKey: "PageSize")
+        dic.updateValue(vCFBundleShortVersionStr!, forKey: "Version")
+        
+         let  provider = MoyaProvider<NetAPIManager>()
+        provider.request(.PostGetMessageList(parameters: dic)) { (result) in
+            switch result{
+                
+              case let .success(response):
+                print(response)
+                let data = try! (response.mapJSON() as AnyObject).modelToJSONString()
+                
+                print("dsta:===","\(data ?? "")")
+                
+                 if let object = MessageRootClass.deserialize(from: data) {
+                    
+                    
+                }
+                
+                
+            case let .failure(error):
+                print(error)
+            }
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

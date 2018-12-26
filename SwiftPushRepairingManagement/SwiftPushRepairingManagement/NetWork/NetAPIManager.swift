@@ -9,10 +9,40 @@
 import Foundation
 import Moya
 
+
 enum NetAPIManager {
     case PostLogin(parameters:[String :Any]) //登录
     case PostGetMessageList(parameters:[String :Any]) //获取消息列表
     case PostGrabOrder(parameters:[String :Any]) //抢单
+    
+    case PostSaveJgAccount(parameters:[String :Any]) //保存代理人和极光账户关系
+    case PostGetAccidentClueTotalCout(parameters:[String :Any]) // 获取线索管理总数
+    case PostGetAccidentClue(parameters:[String :Any]) //线索列表+搜索
+    
+    case GetNewTGetReInfo(parameters:[String :Any]) //续保
+    case PostGetClusDetails(parameters:[String :Any]) //获取线索详情
+    case PostDelAppClue(parameters:[String :Any]) //删除线索
+    
+    case PostGetSmsTemplateList(parameters:[String :Any]) //获取短信模板
+    case PostSendMessage(parameters:[String :Any]) //跟进记录发送短信
+    case PostGetFollowUpStatesV2(parameters:[String :Any]) //获取跟进状态
+    
+    case PostGetLossReasons(parameters:[String :Any]) //流失原因
+    case PostGetRecivesCarPeoples(parameters:[String :Any]) //获取顶级代理人下所有接车人
+    case PostInputFollowUp(parameters:[String :Any]) //录入跟进
+    
+    case PostEditClueInfo(parameters:[String :Any]) //编辑线索
+    case PostGetClueParam(parameters:[String :Any]) //获取保险公司和案件类型
+    case PostIsCanFollow(parameters:[String :Any]) //线索是否可以跟进
+    
+    case PostUploadImg(parameters:[String :Any]) //跟进上图片
+    case PostGetStatisticsInfo(parameters:[String :Any]) //获取个人中心统计信息
+    case PostCompareVersion(parameters:[String :Any]) //版本号比较
+    
+    case PostSignOut(parameters:[String :Any]) // 退出
+    case PostAddClues(parameters:[String :Any]) //新增线索
+    case PostExitCallPhone(parameters:[String :Any]) //打电话校验
+    
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -21,25 +51,70 @@ extension NetAPIManager: TargetType {
     var baseURL: URL { return URL(string: BaseUrl)! }
     var path: String {
         switch self {
-        case .PostLogin(parameters: _):
+        case .PostLogin( _):
             
             return "Accident/Login"
-        case .PostGetMessageList(parameters:_):
+        case .PostGetMessageList( _):
            return "Accident/GetMessage"
-        case .PostGrabOrder(parameters:_):
+        case .PostGrabOrder(_):
             return "Accident/GrabOrder"
             
+        case .PostSaveJgAccount( _):
+            return "Accident/SaveJgAccount"
+        case .PostGetAccidentClueTotalCout( _):
+            return "Accident/GetAccidentClueTotalCout"
+        case .PostGetAccidentClue( _):
+            return "Accident/GetAccidentClue"
+        case .GetNewTGetReInfo( _):
+            return "Accident/TGetReInfo"
+        case .PostGetClusDetails( _):
+            return "Accident/GetClusDetails"
+        case .PostDelAppClue( _):
+            return "Accident/DelAppClue"
+        case .PostGetSmsTemplateList( _):
+            return "Accident/GetSmsTemplateList"
+        case .PostSendMessage( _):
+            return "Accident/SendMessage"
+        case .PostGetFollowUpStatesV2( _):
+            return "Accident/GetFollowUpStatesV2"
+        case .PostGetLossReasons( _):
+            return "Accident/GetLossReasons"
+        case .PostGetRecivesCarPeoples( _):
+            return "Accident/GetRecivesCarPeoples"
+        case .PostInputFollowUp( _):
+            return "Accident/InputFollowUp"
+        case .PostEditClueInfo( _):
+            return "Accident/EditClueInfo"
+        case .PostGetClueParam( _):
+            return "Accident/GetClueParam"
+        case .PostIsCanFollow( _):
+            return "Accident/IsCanFollow"
+        case .PostUploadImg( _):
+            return "Accident/UploadImg"
+        case .PostGetStatisticsInfo( _):
+            return "Accident/GetStatisticsInfo"
+        case .PostCompareVersion( _):
+            return "Accident/CompareVersion"
+        case .PostSignOut( _):
+            return "Accident/SignOut"
+        case .PostAddClues( _):
+            return "Accident/AddClues"
+        case .PostExitCallPhone( _):
+            return "Accident/ExitCallPhone"
         }
     }
     var method: Moya.Method {
         switch self {
-//        case :
-//            return .get
-        case .PostLogin,.PostGetMessageList,.PostGrabOrder:
+
+        case .GetNewTGetReInfo:
+            return .get
+            
+        default:
             return .post
         }
     }
     var task: Task {
+        
         
          return .requestParameters(parameters: parameters!, encoding: URLEncoding.default)
 //        switch self {
@@ -75,7 +150,21 @@ extension NetAPIManager: TargetType {
           let temp = refineUsrWithDic(tempDic: dic)
             
             return temp
-        default:
+        case .PostGetMessageList(parameters: var dic):
+            
+         //    let userData = UserData.readUserInfo()
+             dic.updateValue("iOS", forKey: "LoginType")
+             
+            let temp = refineUsrWithDic(tempDic: addPublicParameters(dic))
+            
+            return temp
+        default :
+            
+            let userData = UserData.readUserInfo()
+            
+            print(userData.Token as Any)
+            
+            
             
             return nil
         }
@@ -103,6 +192,20 @@ private extension String {
     var utf8Encoded: Data {
         return data(using: .utf8)!
     }
+}
+
+
+func addPublicParameters(_ parmDic: [String:Any]) -> [String:Any] {
+    let user: LoginData! = UserData.readUserInfo()
+    var parameters = parmDic
+   
+    parameters.updateValue(user.AgentId!, forKey: "AgentId")
+    
+     parameters.updateValue(user.TopAgentId!, forKey: "TopAgentId")
+    
+     parameters.updateValue(user.Token!, forKey: "Token")
+    
+    return parameters
 }
 
 
