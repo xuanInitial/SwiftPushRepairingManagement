@@ -8,19 +8,19 @@ import HandyJSON
 
 class MessageList : HandyJSON{
 
-	var content : String?
-	var createTime : String?
-	var culeId : Int?
-	var culeState : Int?
-	var deleted : Int?
-	var isHandle : Int?
-	var mesaageType : Int?
-	var messageId : Int?
-	var operateAgentId : Int?
-	var reciveAgentId : Int?
-	var timeDifference : Float?
-	var timeoutNoticeCount : Int?
-	var title : String?
+	var Content : String?
+	var CreateTime : String?
+	var CuleId : Int?
+	var CuleState : Int?
+	var Deleted : Int?
+	var IsHandle : Int?
+	var MesaageType : Int?
+	var MessageId : Int?
+	var OperateAgentId : Int?
+	var ReciveAgentId : Int?
+	var TimeDifference : Float?
+	var TimeoutNoticeCount : Int?
+	var Title : String?
 
     required init() {}
 }

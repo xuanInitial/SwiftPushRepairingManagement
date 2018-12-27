@@ -8,9 +8,9 @@ import HandyJSON
 
 class MessageRootClass :HandyJSON{
 
-	var code : Int?
-	var data : MessageData?
-	var message : String?
+	var Code : Int?
+	var Data : MessageData?
+	var Message : String?
 
     required init() {}
 }
