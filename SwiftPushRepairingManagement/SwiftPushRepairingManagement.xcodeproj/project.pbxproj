@@ -34,6 +34,8 @@
 		425F9DA821D0D3CF004D0A35 /* LoginFunctionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DA621D0D3CF004D0A35 /* LoginFunctionCode.swift */; };
 		425F9DA921D0D3CF004D0A35 /* LoginRootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DA721D0D3CF004D0A35 /* LoginRootClass.swift */; };
 		425F9DAF21D1015E004D0A35 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */; };
+		4269B28F21DCAFB200D1E625 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B28E21DCAFB200D1E625 /* MessageTableViewCell.swift */; };
+		4269B29121DDA1E700D1E625 /* RobMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B29021DDA1E700D1E625 /* RobMessageTableViewCell.swift */; };
 		427B14C221D3B2A4005B9782 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14BF21D3B2A3005B9782 /* MessageData.swift */; };
 		427B14C321D3B2A4005B9782 /* MessageRootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C021D3B2A3005B9782 /* MessageRootClass.swift */; };
 		427B14C421D3B2A4005B9782 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C121D3B2A4005B9782 /* MessageList.swift */; };
@@ -80,6 +82,8 @@
 		425F9DA621D0D3CF004D0A35 /* LoginFunctionCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFunctionCode.swift; sourceTree = "<group>"; };
 		425F9DA721D0D3CF004D0A35 /* LoginRootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRootClass.swift; sourceTree = "<group>"; };
 		425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
+		4269B28E21DCAFB200D1E625 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		4269B29021DDA1E700D1E625 /* RobMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobMessageTableViewCell.swift; sourceTree = "<group>"; };
 		427B14BF21D3B2A3005B9782 /* MessageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		427B14C021D3B2A3005B9782 /* MessageRootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageRootClass.swift; sourceTree = "<group>"; };
 		427B14C121D3B2A4005B9782 /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
@@ -340,6 +344,8 @@
 		4231618221CA2E8900E61E91 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4269B28E21DCAFB200D1E625 /* MessageTableViewCell.swift */,
+				4269B29021DDA1E700D1E625 /* RobMessageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				425F9DA321D0C558004D0A35 /* UserData.swift in Sources */,
 				425F9D9621D0ABA4004D0A35 /* UserdefaultsData.swift in Sources */,
 				427E4CC021CD06CA0000EFD9 /* APIManager.swift in Sources */,
+				4269B29121DDA1E700D1E625 /* RobMessageTableViewCell.swift in Sources */,
 				4231619221CA2F3900E61E91 /* LoginViewController.swift in Sources */,
 				425F9D9421D0AA9A004D0A35 /* UserDefaultsSettable.swift in Sources */,
 				4231613821CA27E200E61E91 /* ViewController.swift in Sources */,
@@ -616,6 +623,7 @@
 				4231618A21CA2EC900E61E91 /* PersonalCenterViewController.swift in Sources */,
 				427E4CC921CE0A960000EFD9 /* NetWorkMd5.swift in Sources */,
 				4231619521CA380B00E61E91 /* AppConfig.swift in Sources */,
+				4269B28F21DCAFB200D1E625 /* MessageTableViewCell.swift in Sources */,
 				427B14C321D3B2A4005B9782 /* MessageRootClass.swift in Sources */,
 				427B14C221D3B2A4005B9782 /* MessageData.swift in Sources */,
 				4231617521CA2D2900E61E91 /* BaseTableView.swift in Sources */,

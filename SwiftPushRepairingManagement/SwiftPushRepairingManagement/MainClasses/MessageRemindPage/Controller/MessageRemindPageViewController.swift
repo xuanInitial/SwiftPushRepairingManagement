@@ -9,11 +9,13 @@
 import UIKit
 import Moya
 
-class MessageRemindPageViewController: BaseViewController {
+class MessageRemindPageViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
+
+    
 
     var page = 1
     
-    
+    let messageTableView = BaseTableView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +30,17 @@ class MessageRemindPageViewController: BaseViewController {
         
         print(userData.Token as Any)
         loadData()
+        createUI()
+    }
+    
+    func createUI() {
+        
+        messageTableView.frame = CGRect (x: 0, y: 64, width: TXSCREEN_W, height: TXSCREEN_H-64-49)
+        messageTableView.delegate = self;
+        messageTableView.dataSource = self;
+      //  messageTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        messageTableView.register(MessageTableViewCell.self, forCellReuseIdentifier: "MessageTableViewCell")
+        self.view .addSubview(messageTableView)
     }
     
 
@@ -60,6 +73,30 @@ class MessageRemindPageViewController: BaseViewController {
             }
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell") as! MessageTableViewCell
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        
+      //  cell.data = self.danceListDate[indexPath.row]
+     //cell.messageModel
+        return (cell ?? nil)!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     /*
