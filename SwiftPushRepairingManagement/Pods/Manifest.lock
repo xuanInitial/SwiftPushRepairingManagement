@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (4.8.0)
+  - Charts (3.2.1):
+    - Charts/Core (= 3.2.1)
+  - Charts/Core (3.2.1)
+  - ChartsRealm (3.2.1):
+    - Charts (~> 3.2.1)
+    - RealmSwift (~> 3.11.1)
   - DZNEmptyDataSet (1.8.1)
   - HandyJSON (4.2.0)
   - Kingfisher (5.0.1)
@@ -13,7 +19,12 @@ PODS:
     - RxSwift (~> 4.0)
   - ObjectMapper (3.4.2)
   - Onboard (2.3.3)
-  - Result (4.0.0)
+  - Realm (3.11.2):
+    - Realm/Headers (= 3.11.2)
+  - Realm/Headers (3.11.2)
+  - RealmSwift (3.11.2):
+    - Realm (= 3.11.2)
+  - Result (4.1.0)
   - RxAtomic (4.4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
@@ -24,6 +35,7 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - ChartsRealm
   - DZNEmptyDataSet
   - HandyJSON (= 4.2.0)
   - Kingfisher
@@ -39,6 +51,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Charts
+    - ChartsRealm
     - DZNEmptyDataSet
     - HandyJSON
     - Kingfisher
@@ -47,6 +61,8 @@ SPEC REPOS:
     - Moya
     - ObjectMapper
     - Onboard
+    - Realm
+    - RealmSwift
     - Result
     - RxAtomic
     - RxSwift
@@ -56,6 +72,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
+  ChartsRealm: 8570ca829ee82715018e72a0935687de86e3b126
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
@@ -64,13 +82,15 @@ SPEC CHECKSUMS:
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
+  RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 4f587a14b201439c8e9f562a0fd1a22988d56b50
+PODFILE CHECKSUM: 5f40b75b71861b34b3aaae079b51f949458942ed
 
 COCOAPODS: 1.5.3

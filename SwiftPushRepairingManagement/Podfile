@@ -33,5 +33,7 @@ pod 'MJExtension'
 
 pod 'MJRefresh'
 
+pod 'ChartsRealm'
+
 
 end 

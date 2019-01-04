@@ -16,6 +16,9 @@ class MessageRemindPageViewController: BaseViewController,UITableViewDelegate,UI
     var page = 1
     
     let messageTableView = BaseTableView()
+    fileprivate lazy var messageListDate : [MessageList] = []  //创建一个数组
+    fileprivate lazy var robMessageData : [RobbingMessageList] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +43,8 @@ class MessageRemindPageViewController: BaseViewController,UITableViewDelegate,UI
         messageTableView.dataSource = self;
       //  messageTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         messageTableView.register(MessageTableViewCell.self, forCellReuseIdentifier: "MessageTableViewCell")
+         messageTableView.register(RobMessageTableViewCell.self, forCellReuseIdentifier: "RobMessageTableViewCell")
+        
         self.view .addSubview(messageTableView)
     }
     
@@ -64,19 +69,26 @@ class MessageRemindPageViewController: BaseViewController,UITableViewDelegate,UI
                 
                  if let object = MessageRootClass.deserialize(from: data) {
                     
-                    
+                    self.messageListDate = (object.Data?.MessageList)!
                 }
                 
-                
+                self.messageTableView.reloadData()
             case let .failure(error):
                 print(error)
             }
         }
         
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        if section==0 {
+            return self.robMessageData.count
+        }
+        return self.messageListDate.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -86,12 +98,20 @@ class MessageRemindPageViewController: BaseViewController,UITableViewDelegate,UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell") as! MessageTableViewCell
-        cell.selectionStyle = UITableViewCell.SelectionStyle.none
-        
-      //  cell.data = self.danceListDate[indexPath.row]
-     //cell.messageModel
-        return (cell ?? nil)!
+        if indexPath.section==0 {
+            let robCell = tableView.dequeueReusableCell(withIdentifier: "RobMessageTableViewCell") as! RobMessageTableViewCell
+            robCell.selectionStyle = UITableViewCell.SelectionStyle.none
+            
+
+           // messageCell.messageModel = self.messageListDate[indexPath.row]
+            return robCell
+        }else{
+            let messageCell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell") as! MessageTableViewCell
+            messageCell.selectionStyle = UITableViewCell.SelectionStyle.none
+            messageCell.messageModel = self.messageListDate[indexPath.row]
+            return messageCell
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

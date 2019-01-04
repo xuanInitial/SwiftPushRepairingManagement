@@ -9,6 +9,7 @@ import HandyJSON
 class MessageData : HandyJSON{
 
 	var MessageList : [MessageList]?
+    var RobbingMessageList : [RobbingMessageList]?
 	var PageIndex : Int?
 	var PageSize : Int?
 	var TotalCount : Int?

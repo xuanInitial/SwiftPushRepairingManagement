@@ -36,6 +36,7 @@
 		425F9DAF21D1015E004D0A35 /* NetAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */; };
 		4269B28F21DCAFB200D1E625 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B28E21DCAFB200D1E625 /* MessageTableViewCell.swift */; };
 		4269B29121DDA1E700D1E625 /* RobMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B29021DDA1E700D1E625 /* RobMessageTableViewCell.swift */; };
+		4269B29321DF4CCD00D1E625 /* RobbingMessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B29221DF4CCD00D1E625 /* RobbingMessageList.swift */; };
 		427B14C221D3B2A4005B9782 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14BF21D3B2A3005B9782 /* MessageData.swift */; };
 		427B14C321D3B2A4005B9782 /* MessageRootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C021D3B2A3005B9782 /* MessageRootClass.swift */; };
 		427B14C421D3B2A4005B9782 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C121D3B2A4005B9782 /* MessageList.swift */; };
@@ -84,6 +85,7 @@
 		425F9DAE21D1015E004D0A35 /* NetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetAPIManager.swift; sourceTree = "<group>"; };
 		4269B28E21DCAFB200D1E625 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		4269B29021DDA1E700D1E625 /* RobMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobMessageTableViewCell.swift; sourceTree = "<group>"; };
+		4269B29221DF4CCD00D1E625 /* RobbingMessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobbingMessageList.swift; sourceTree = "<group>"; };
 		427B14BF21D3B2A3005B9782 /* MessageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		427B14C021D3B2A3005B9782 /* MessageRootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageRootClass.swift; sourceTree = "<group>"; };
 		427B14C121D3B2A4005B9782 /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			children = (
 				427B14BF21D3B2A3005B9782 /* MessageData.swift */,
 				427B14C121D3B2A4005B9782 /* MessageList.swift */,
+				4269B29221DF4CCD00D1E625 /* RobbingMessageList.swift */,
 				427B14C021D3B2A3005B9782 /* MessageRootClass.swift */,
 			);
 			path = Model;
@@ -533,6 +536,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPushRepairingManagement/Pods-SwiftPushRepairingManagement-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -541,6 +546,8 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -551,6 +558,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -559,6 +568,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -611,6 +622,7 @@
 				425F9DA521D0D3C9004D0A35 /* LoginData.swift in Sources */,
 				427E4CCF21CE1C700000EFD9 /* SSKeychain.m in Sources */,
 				427B14C421D3B2A4005B9782 /* MessageList.swift in Sources */,
+				4269B29321DF4CCD00D1E625 /* RobbingMessageList.swift in Sources */,
 				4231618E21CA2EFF00E61E91 /* MessageRemindPageViewController.swift in Sources */,
 				425F9D9A21D0B779004D0A35 /* extension_UIColor.swift in Sources */,
 				427E4CBE21CD067B0000EFD9 /* DataConfig.swift in Sources */,

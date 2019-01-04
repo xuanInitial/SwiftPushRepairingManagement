@@ -150,7 +150,7 @@ extension NetAPIManager: TargetType {
           let temp = refineUsrWithDic(tempDic: dic)
             
             return temp
-        case .PostGetMessageList(parameters: var dic):
+        case .PostGetMessageList(parameters: var dic) , .PostSignOut(parameters: var dic):
             
          //    let userData = UserData.readUserInfo()
              dic.updateValue("iOS", forKey: "LoginType")
