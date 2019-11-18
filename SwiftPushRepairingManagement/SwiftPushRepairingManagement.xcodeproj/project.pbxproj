@@ -37,6 +37,8 @@
 		4269B28F21DCAFB200D1E625 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B28E21DCAFB200D1E625 /* MessageTableViewCell.swift */; };
 		4269B29121DDA1E700D1E625 /* RobMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B29021DDA1E700D1E625 /* RobMessageTableViewCell.swift */; };
 		4269B29321DF4CCD00D1E625 /* RobbingMessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B29221DF4CCD00D1E625 /* RobbingMessageList.swift */; };
+		4269B29521E0587200D1E625 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B29421E0587200D1E625 /* BaseModel.swift */; };
+		4269B29B21E05D4300D1E625 /* ClueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269B29A21E05D4300D1E625 /* ClueDetailViewController.swift */; };
 		427B14C221D3B2A4005B9782 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14BF21D3B2A3005B9782 /* MessageData.swift */; };
 		427B14C321D3B2A4005B9782 /* MessageRootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C021D3B2A3005B9782 /* MessageRootClass.swift */; };
 		427B14C421D3B2A4005B9782 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B14C121D3B2A4005B9782 /* MessageList.swift */; };
@@ -86,6 +88,8 @@
 		4269B28E21DCAFB200D1E625 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		4269B29021DDA1E700D1E625 /* RobMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobMessageTableViewCell.swift; sourceTree = "<group>"; };
 		4269B29221DF4CCD00D1E625 /* RobbingMessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobbingMessageList.swift; sourceTree = "<group>"; };
+		4269B29421E0587200D1E625 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		4269B29A21E05D4300D1E625 /* ClueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueDetailViewController.swift; sourceTree = "<group>"; };
 		427B14BF21D3B2A3005B9782 /* MessageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		427B14C021D3B2A3005B9782 /* MessageRootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageRootClass.swift; sourceTree = "<group>"; };
 		427B14C121D3B2A4005B9782 /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				4231617221CA2D0800E61E91 /* BaseNavigationController.swift */,
 				4231617421CA2D2900E61E91 /* BaseTableView.swift */,
 				4231617621CA2D4200E61E91 /* BaseTableViewCell.swift */,
+				4269B29421E0587200D1E625 /* BaseModel.swift */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 		4231616821CA2AAD00E61E91 /* MainClasses */ = {
 			isa = PBXGroup;
 			children = (
+				4269B29621E05D1B00D1E625 /* ClueDetail */,
 				4231617B21CA2DDA00E61E91 /* PersonalCenter */,
 				4231617A21CA2DCC00E61E91 /* CluesManagementPage */,
 				4231617921CA2DC000E61E91 /* MessageRemindPage */,
@@ -418,6 +424,38 @@
 				425F9DA021D0C0DD004D0A35 /* UserInfo.swift */,
 			);
 			path = UserData;
+			sourceTree = "<group>";
+		};
+		4269B29621E05D1B00D1E625 /* ClueDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4269B29721E05D1B00D1E625 /* Contriller */,
+				4269B29821E05D1B00D1E625 /* Model */,
+				4269B29921E05D1B00D1E625 /* View */,
+			);
+			path = ClueDetail;
+			sourceTree = "<group>";
+		};
+		4269B29721E05D1B00D1E625 /* Contriller */ = {
+			isa = PBXGroup;
+			children = (
+				4269B29A21E05D4300D1E625 /* ClueDetailViewController.swift */,
+			);
+			path = Contriller;
+			sourceTree = "<group>";
+		};
+		4269B29821E05D1B00D1E625 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4269B29921E05D1B00D1E625 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		427E4CC521CD155D0000EFD9 /* Tool */ = {
@@ -625,11 +663,13 @@
 				4269B29321DF4CCD00D1E625 /* RobbingMessageList.swift in Sources */,
 				4231618E21CA2EFF00E61E91 /* MessageRemindPageViewController.swift in Sources */,
 				425F9D9A21D0B779004D0A35 /* extension_UIColor.swift in Sources */,
+				4269B29521E0587200D1E625 /* BaseModel.swift in Sources */,
 				427E4CBE21CD067B0000EFD9 /* DataConfig.swift in Sources */,
 				425F9DA821D0D3CF004D0A35 /* LoginFunctionCode.swift in Sources */,
 				427E4CD121CE7F310000EFD9 /* TXViewLayoutHelper.swift in Sources */,
 				4231616F21CA2B4100E61E91 /* RootTabBarViewController.swift in Sources */,
 				4231617321CA2D0800E61E91 /* BaseNavigationController.swift in Sources */,
+				4269B29B21E05D4300D1E625 /* ClueDetailViewController.swift in Sources */,
 				4231617721CA2D4200E61E91 /* BaseTableViewCell.swift in Sources */,
 				4231618C21CA2EE700E61E91 /* CluesManagementPageViewController.swift in Sources */,
 				4231618A21CA2EC900E61E91 /* PersonalCenterViewController.swift in Sources */,

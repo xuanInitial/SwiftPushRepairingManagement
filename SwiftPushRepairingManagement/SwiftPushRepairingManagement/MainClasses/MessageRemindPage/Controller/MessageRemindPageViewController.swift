@@ -45,10 +45,29 @@ class MessageRemindPageViewController: BaseViewController,UITableViewDelegate,UI
         messageTableView.register(MessageTableViewCell.self, forCellReuseIdentifier: "MessageTableViewCell")
          messageTableView.register(RobMessageTableViewCell.self, forCellReuseIdentifier: "RobMessageTableViewCell")
         
+    
+        
         self.view .addSubview(messageTableView)
     }
     
+    fileprivate func setUpRefresh() {
+        // MARK: - 下拉
+        self.messageTableView.mj_header = MJRefreshGifHeader(refreshingBlock: { [weak self]() -> Void in
+            self!.loadData()
+            self!.messageTableView.mj_header.endRefreshing()
+        })
+        self.messageTableView.mj_header.isAutomaticallyChangeAlpha = true
+        self.messageTableView.mj_header.beginRefreshing()
+    }
 
+    fileprivate func setLoadMore() {
+        // MARK: - 上拉
+        self.messageTableView.mj_footer = MJRefreshFooter(refreshingBlock: { [weak self]() -> Void in
+            self!.loadData()
+            self!.messageTableView.mj_footer.endRefreshing()
+        })
+        self.messageTableView.mj_footer.isAutomaticallyChangeAlpha = true
+    }
     func loadData() {
         
         var dic = [String :Any]()
@@ -102,8 +121,47 @@ class MessageRemindPageViewController: BaseViewController,UITableViewDelegate,UI
             let robCell = tableView.dequeueReusableCell(withIdentifier: "RobMessageTableViewCell") as! RobMessageTableViewCell
             robCell.selectionStyle = UITableViewCell.SelectionStyle.none
             
+            robCell.robModel = self.robMessageData[indexPath.row]
+            robCell.robButtonClickBlock = { model in
+                
+                var dic = [String :Any]()
+                dic.updateValue("", forKey: "")
+                
+                let  provider = MoyaProvider<NetAPIManager>()
+                provider.request(.PostGrabOrder(parameters: dic)) { (result) in
+                    switch result{
+                        
+                    case let .success(response):
+                        print(response)
+                        let data = try! (response.mapJSON() as AnyObject).modelToJSONString()
+                        
+                        print("dsta:===","\(data ?? "")")
+                        if let object = BaseModel.deserialize(from: data) {
+                            if let code = object.Code{
+                             
+                                 if Int(code) == 1 {
+                                   
+                                    let clueDetailVC = ClueDetailViewController()
+                                    clueDetailVC.clueId = (model?.CuleId)!
+                                    clueDetailVC.hidesBottomBarWhenPushed = true
+                                    self.navigationController?.pushViewController(clueDetailVC, animated: true)
+                                }
+                                self.page = 1;
+                                self.loadData()
+                            }
+                        
+                        }
+                        
 
-           // messageCell.messageModel = self.messageListDate[indexPath.row]
+                    case let .failure(error):
+                        print(error)
+                    }
+                }
+                
+                
+                
+                
+            }
             return robCell
         }else{
             let messageCell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell") as! MessageTableViewCell

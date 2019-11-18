@@ -8,22 +8,22 @@
 
 import UIKit
 
-typealias RobButtonClickBlock = (RobbingMessageList?) -> Void
 
-var tipLabel: UILabel?/*多方事故。。。 */
-var brandNameLabel: UILabel?
-var sourceNameLabel: UILabel?
-var licenseNoLabel: UILabel?
-var carOwnerLabel: UILabel?
-var robButton: UIButton?
-var robButtonClickBlock: RobButtonClickBlock?
-var robMessageModel: RobbingMessageList?
 
 
 
 class RobMessageTableViewCell: BaseTableViewCell {
 
+    typealias RobButtonClickBlock = (RobbingMessageList?) -> Void
     
+    var tipLabel: UILabel?/*多方事故。。。 */
+    var brandNameLabel: UILabel?
+    var sourceNameLabel: UILabel?
+    var licenseNoLabel: UILabel?
+    var carOwnerLabel: UILabel?
+    var robButton: UIButton?
+    var robMessageModel: RobbingMessageList?
+    var robButtonClickBlock: RobButtonClickBlock?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -79,9 +79,43 @@ class RobMessageTableViewCell: BaseTableViewCell {
         brandNameLabel!.setContentCompressionResistancePriority(.required, for: .horizontal)
         
         
+        sourceNameLabel?.snp.makeConstraints({ (mark) in
+            mark.left.equalTo((brandNameLabel?.snp.right)!).offset(12)
+            mark.centerY.equalTo((brandNameLabel?.snp.centerY)!)
+            mark.size.equalTo(CGSize(width: 60, height: 16))
+        })
+        sourceNameLabel!.setContentCompressionResistancePriority(.required, for: .horizontal)
+        
+        
+        licenseNoLabel?.snp.makeConstraints({ (mark) in
+            mark.left.equalTo(self.contentView).offset(TXMARGIN)
+            mark.top.equalTo((sourceNameLabel?.snp.bottom)!).offset(8)
+            mark.height.equalTo(12)
+        })
+        
+        licenseNoLabel!.setContentCompressionResistancePriority(.required, for: .horizontal)
+        
+        
+        carOwnerLabel?.snp.makeConstraints({ (mark) in
+            mark.left.equalTo((licenseNoLabel?.snp.right)!).offset(12)
+            mark.centerY.equalTo((licenseNoLabel?.snp.centerY)!)
+            mark.height.equalTo(14)
+        })
+
+        carOwnerLabel!.setContentCompressionResistancePriority(.required, for: .horizontal)
+        
+        
+        robButton!.addTarget(self, action: #selector(self.btnClick), for: .touchUpInside)
+        
+        robButton?.snp.makeConstraints({ (mark) in
+            mark.centerY.equalTo(self.contentView.snp.centerY)
+            mark.right.equalTo(self.contentView).offset(-TXMARGIN)
+            mark.size.equalTo(CGSize(width: 72, height: 40))
+        })
+        
     }
     
-    func btnClick() {
+    @objc func btnClick() {
         
         if (robButtonClickBlock != nil) {
             robButtonClickBlock!(robMessageModel)
@@ -137,5 +171,20 @@ class RobMessageTableViewCell: BaseTableViewCell {
     }
     
 
+    private var tempModel:RobbingMessageList? = RobbingMessageList()
+    var robModel : RobbingMessageList {
+        
+        set{
+            
+        }
+        
+        get{
+            
+            return self.tempModel!
+        }
+        
+        
+    }
+    
     
 }

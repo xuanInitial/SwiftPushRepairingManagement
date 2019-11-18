@@ -16,7 +16,7 @@ class PersonalCenterViewController: BaseViewController {
         // Do any additional setup after loading the view.
         
        
-     //  loadOut()
+      loadOut()
     }
     
 
